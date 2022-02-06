@@ -23,6 +23,29 @@ namespace AddressBookSystem_linq_
             table.Columns.Add("Zip", typeof(string));
             table.Columns.Add("PhoneNumber", typeof(string));
             table.Columns.Add("Email", typeof(string));
+
+            /*UC3:-Ability to insert new Contacts to Address Book */
+            table.Rows.Add("ghouse", "shaik", "alamaspet", "kadapa", "andhra", "516001", "8877367437", "sv@gmail.com");
+            table.Rows.Add("Ekta", "Kumbhare", "Aund", "luv", "Mhaa", "125121", "8570934858", "ek@gmail.com");
+            table.Rows.Add("Vi", "Singh", "Mjk", "Mumbai", "karnata", "442206", "7894561230", "hal@gmail.com.a");
+
+        }
+        public void GetAllContacts()
+        {
+            Console.WriteLine("\n\n");
+            foreach (DataRow dataRow in table.AsEnumerable())
+            {
+                Console.WriteLine("\n\n");
+                Console.WriteLine("FirstName:- " + dataRow.Field<string>("firstName"));
+                Console.WriteLine("LastName:- " + dataRow.Field<string>("lastName"));
+                Console.WriteLine("Address:- " + dataRow.Field<string>("address"));
+                Console.WriteLine("City:- " + dataRow.Field<string>("city"));
+                Console.WriteLine("State:- " + dataRow.Field<string>("state"));
+                Console.WriteLine("Zip:- " + dataRow.Field<string>("zip"));
+                Console.WriteLine("PhoneNumber:- " + dataRow.Field<string>("phoneNumber"));
+                Console.WriteLine("Email:- " + dataRow.Field<string>("eMail"));
+            }
+
         }
 
     }
