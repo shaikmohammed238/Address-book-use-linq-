@@ -8,9 +8,11 @@ namespace AddressBookSystem_linq_
         {
             Console.WriteLine("Welcome The Address Book Use Linq");
             //uc1 create new table 
-            AddressBookTable addressbookTable = new AddressBookTable();
+            AddressBookTable addressBookTable = new AddressBookTable();
 
-            addressbookTable.GetAllContacts();
+            //   addressbookTable.GetAllContacts();//uc3
+            addressBookTable.EditExistingContact("ghouse", "shaik", "PhoneNumber", "9921670015");
+
             Console.ReadLine();
 
         }
