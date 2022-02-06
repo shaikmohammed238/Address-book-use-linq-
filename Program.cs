@@ -11,8 +11,8 @@ namespace AddressBookSystem_linq_
             AddressBookTable addressBookTable = new AddressBookTable();
 
             //   addressbookTable.GetAllContacts();//uc3
-            addressBookTable.EditExistingContact("ghouse", "shaik", "PhoneNumber", "9921670015");
-
+            // addressBookTable.EditExistingContact("ghouse", "shaik", "PhoneNumber", "9921670015");//uc4
+            addressBookTable.DeleteContact("ghouse", "shaik"); //UC5
             Console.ReadLine();
 
         }
