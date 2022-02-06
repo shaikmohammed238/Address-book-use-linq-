@@ -16,7 +16,8 @@ namespace AddressBookSystem_linq_
             // addressBookTable.RetrieveByCityOrState("kadapa","andhra");//uc6
             //addressBookTable.CountByCityOrState("kadapa", "andhra");//UC7
             // addressBookTable.SortedContactsByNameForAgivenCity("kadapa"); //uc8
-            addressBookTable.AddAddressBookNameType();// uc9 
+            //addressBookTable.AddAddressBookNameType();// uc9 
+            addressBookTable.GetCountByType();// uc10
 
             Console.ReadLine();
 
