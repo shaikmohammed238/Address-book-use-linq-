@@ -58,6 +58,23 @@ namespace AddressBookSystem_linq_
             GetAllContacts();
 
         }
+        /* UC5:- Ability to delete a person using person's name.
+        */
 
+        public void DeleteContact(string firstName, string lastName)
+        {
+            try
+            {
+                DataRow contact = table.Select("FirstName = '" + firstName + "' and LastName = '" + lastName + "'").FirstOrDefault();
+                table.Rows.Remove(contact);
+                Console.WriteLine("Record Successfully Delete");
+                GetAllContacts();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+        }
     }
 }
