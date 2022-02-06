@@ -15,7 +15,8 @@ namespace AddressBookSystem_linq_
             //  addressBookTable.DeleteContact("ghouse", "shaik"); //UC5
             // addressBookTable.RetrieveByCityOrState("kadapa","andhra");//uc6
             //addressBookTable.CountByCityOrState("kadapa", "andhra");//UC7
-            addressBookTable.SortedContactsByNameForAgivenCity("kadapa"); //uc8
+            // addressBookTable.SortedContactsByNameForAgivenCity("kadapa"); //uc8
+            addressBookTable.AddAddressBookNameType();// uc9 
 
             Console.ReadLine();
 

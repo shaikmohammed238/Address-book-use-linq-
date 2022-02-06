@@ -139,5 +139,36 @@ namespace AddressBookSystem_linq_
                 Console.WriteLine("Email:- " + dr.Field<string>("eMail"));
             }
         }
+        /*UC9:- Ability to identify each Address Book with name and Type.
+        *      - Here the type could Family, Friends, Profession, etc.
+               - Alter Address Book to add name and type.
+       */
+
+        public void AddAddressBookNameType()
+        {
+            try
+            {
+
+                DataColumn column;
+                column = new DataColumn();
+                column.DataType = System.Type.GetType("System.String");
+                column.ColumnName = "addressBookName";
+                column.AllowDBNull = false;
+                column.DefaultValue = "Home";
+                table.Columns.Add(column);
+
+                column = new DataColumn();
+                column.DataType = System.Type.GetType("System.String");
+                column.ColumnName = "type";
+                column.AllowDBNull = false;
+                column.DefaultValue = "Friend";
+                table.Columns.Add(column);
+                GetAllContacts();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
     }
 }
