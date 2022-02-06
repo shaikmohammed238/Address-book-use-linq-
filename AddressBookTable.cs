@@ -47,6 +47,17 @@ namespace AddressBookSystem_linq_
             }
 
         }
+        /*UC4:- Ability to edit existing contact person using their name
+         */
+
+        public void EditExistingContact(string firstName, string lastName, string column, string newValue)
+        {
+            DataRow contact = table.Select("FirstName = '" + firstName + "' and LastName = '" + lastName + "'").FirstOrDefault();
+            contact[column] = newValue;
+            Console.WriteLine("Record successfully Edit");
+            GetAllContacts();
+
+        }
 
     }
 }
